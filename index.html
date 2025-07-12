@@ -1,151 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Twins Cafe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twins Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="twins_cafelogo.jpg" alt="Twins Cafe Logo" />
-      </div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#offers">Offers</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="twins_cafelogo.jpg" alt="Twins Cafe Logo" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Welcome to Twins Cafe</h2>
-    <p>Peaceful vibes. Tasty food. Good music. All in one place.</p>
-    <a href="#menu" class="btn">Explore Menu</a>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p><strong>In this busy city, Twins Cafe is an oasis in peaceful and quiet environment with good music and good food.</strong></p>
-    <p>We believe in serving happiness through every bite, in a place that feels like home.</p>
-  </section>
-
-  <!-- Menu -->
-  <section id="menu" class="section">
-    <h2>Our Menu</h2>
-    <p>Browse our menu by category. </p>
-
-    <!-- 🥟 MOMO SECTION -->
-    <h3 style="margin-top: 3rem; color: #ff7043;">🥟 Momo</h3>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <h3>Chicken Mo:Mo</h3>
-        <p><span class="price">Rs. 120</span></p>
-      </div>
-      <div class="menu-card">
-        <h3>Buff Mo:Mo</h3>
-        <p><span class="price">Rs. 110</span></p>
-      </div>
-      <div class="menu-card">
-        <h3>Veg Mo:Mo</h3>
-        <p><span class="price">Rs. 100</span></p>
-      </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="drawer-nav" id="drawer-nav">
+        <ul>
+            <li><a href="#about" class="drawer-link">About</a></li>
+            <li><a href="#menu" class="drawer-link">Menu</a></li>
+            <li><a href="#offers" class="drawer-link">Offers</a></li>
+            <li><a href="#gallery" class="drawer-link">Gallery</a></li>
+            <li><a href="#reviews" class="drawer-link">Reviews</a></li>
+            <li><a href="#contact" class="drawer-link">Contact</a></li>
+        </ul>
     </div>
 
-    <!-- 🍜 CHOWMEIN SECTION -->
-    <h3 style="margin-top: 3rem; color: #ff7043;">🍜 Chowmein</h3>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <h3>Veg Chowmein</h3>
-        <p><span class="price">Rs. 120</span></p>
-      </div>
-      <div class="menu-card">
-        <h3>Chicken Chowmein</h3>
-        <p><span class="price">Rs. 150</span></p>
-      </div>
-    </div>
+    <section class="hero">
+        <h2>Welcome to Twins Cafe</h2>
+        <p>Peaceful vibes. Tasty food. Good music. All in one place.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </section>
 
-    <!-- 🍕 PIZZA SECTION -->
-    <h3 style="margin-top: 3rem; color: #ff7043;">🍕 Pizza</h3>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <h3>Cheese Pizza</h3>
-        <p><span class="price">Rs. 350</span></p>
-      </div>
-      <div class="menu-card">
-        <h3>Chicken Pizza</h3>
-        <p><span class="price">Rs. 450</span></p>
-      </div>
-    </div>
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p><strong>In this busy city, Twins Cafe is an oasis in a peaceful and quiet environment with good music and good
+                food.</strong></p>
+        <p>We believe in serving happiness through every bite, in a place that feels like home.</p>
+    </section>
 
-  
-  </section>
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <p>Browse our menu by category.</p>
 
-  <!-- Offers -->
-  <section id="offers" class="section">
-    <h2>Special Offers</h2>
-    <p>Limited-time offers just for you! Grab them before they're gone!</p>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <h3>Chicken Mo:Mo</h3>
-        <p><span class="old-price">Rs. 100</span> <span class="new-price">Rs. 50 only</span></p>
-      </div>
-      <div class="menu-card">
-        <h3>Chicken Pizza</h3>
-        <p><span class="old-price">Rs. 450</span> <span class="new-price">Rs. 300 only</span></p>
-      </div>
-      <!-- Add more offer items here -->
-    </div>
-  </section>
+        <h3 class="menu-category-title">🥪 Sandwiches</h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Veg Sandwich</h3>
+                <p><span class="price">Rs. 220</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken Sandwich</h3>
+                <p><span class="price">Rs. 300</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Grilled Chicken & Cheese Sandwich</h3>
+                <p><span class="price">Rs. 350</span></p>
+            </div>
+        </div>
 
-  <!-- Gallery -->
-  <section id="gallery" class="section">
-    <h2>Our Delicious Moments</h2>
-    <div class="gallery">
-      <img src="food.jpg" />
-      <img src="food1.jpg" />
-      <img src="food2.jpg" />
-      <img src="food3.jpg" />
-      <img src="food4.jpg" />
-      <img src="food5.jpg" />
-      <img src="food6.jpg" />
-      <img src="food7.jpg" />
-      <img src="food8.jpg" />
-      <img src="food9.jpg" />
-    </div>
-  </section>
+        <h3 class="menu-category-title">🍜 Chowmein</h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Veg Chowmein</h3>
+                <p><span class="price">Rs. 120</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Egg Chowmein</h3>
+                <p><span class="price">Rs. 130</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Buff Chowmein</h3>
+                <p><span class="price">Rs. 170</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken Chowmein</h3>
+                <p><span class="price">Rs. 180</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Kimma Noodles</h3>
+                <p><span class="price">Rs. 290</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Mixed Chowmein</h3>
+                <p><span class="price">Rs. 220</span></p>
+            </div>
+        </div>
 
-  <!-- Reviews -->
-  <section id="reviews" class="section">
-    <h2>What Our Customers Say</h2>
-    <div class="reviews">
-      <img src="review.jpg" alt="Customer review 1" class="review-img" />
-      <img src="review1.jpg" alt="Customer review 2" class="review-img" />
-    </div>
-  </section>
+        <h3 class="menu-category-title">🍕 Pizza</h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Cheese Pizza</h3>
+                <p><span class="price">Rs. 400</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken Pizza</h3>
+                <p><span class="price">Rs. 500</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Mixed Pizza</h3>
+                <p><span class="price">Rs. 650</span></p>
+            </div>
+        </div>
+        <h3 class="menu-category-title"> 🥟 MO:MO</h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Steam Veg Mo:Mo</h3>
+                <p><span class="price">Rs. 120</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Kothey Veg Mo:Mo</h3>
+                <p><span class="price">Rs. 160</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Jhol Veg Mo:Mo</h3>
+                <p><span class="price">Rs. 170</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Veg C Mo:Mo</h3>
+                <p><span class="price">Rs. 180</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Sadeko Veg Mo:Mo</h3>
+                <p><span class="price">Rs. 170</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Steam Chicken Mo:Mo</h3>
+                <p><span class="price">Rs. 150</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Kothey Chicken Mo:Mo</h3>
+                <p><span class="price">Rs. 200</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken C Mo:Mo</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Jhol Chicken Mo:Mo</h3>
+                <p><span class="price">Rs. 200</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Steam Buff Mo:Mo</h3>
+                <p><span class="price">Rs. 140</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Kothey Buff Mo:Mo</h3>
+                <p><span class="price">Rs. 190</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Buff C Mo:Mo</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Jhol Buff Mo:Mo</h3>
+                <p><span class="price">Rs. 200</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Sadeko Buff Mo:Mo</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+        </div>
+        <h3 class="menu-category-title"> 🍛 Fried Rice </h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Veg Fried Rice</h3>
+                <p><span class="price">Rs. 190</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Egg Fried Rice</h3>
+                <p><span class="price">Rs. 200</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Mushroom Fried Rice</h3>
+                <p><span class="price">Rs. 230</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken Fried Rice</h3>
+                <p><span class="price">Rs. 260</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Buff Fried Rice</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Mixed Fried Rice</h3>
+                <p><span class="price">Rs. 290</span></p>
+            </div>
+        </div>
+        <h3 class="menu-category-title">🌽 Sweet Corn</h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Sweet Corn Fry</h3>
+                <p><span class="price">Rs. 200</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Sweet Corn Saute</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Veg Tempura</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+        </div>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <h2>Contact Us</h2>
-    <p>📍 Mini Ring Rd, Bharatpur, Nepal</p>
-    <p>📞 984-7231831</p>
-    <p>✉️ twcafe143@gmail.com</p>
-    <p><a href="https://www.facebook.com/twinscafechitwan" target="_blank">🔗 Facebook Page</a></p>
-  </section>
+        <h3 class="menu-category-title">🌶️ Chilly Item</h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Chips Chilly</h3>
+                <p><span class="price">Rs. 230</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Mushroom Chilly</h3>
+                <p><span class="price">Rs. 270</span></p>
+            -            </div>
+            <div class="menu-card">
+                <h3>Buff Chilly</h3>
+                <p><span class="price">Rs. 290</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken Chilly</h3>
+                <p><span class="price">Rs. 350</span></p>
+            </div>
+        </div>
+        <h3 class="menu-category-title">🍜 Thukpa</h3>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Veg Thukpa</h3>
+                <p><span class="price">Rs. 180</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Egg Thukpa</h3>
+                <p><span class="price">Rs. 200</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Buff Thukpa</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken Thukpa</h3>
+                <p><span class="price">Rs. 250</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Mixed Thukpa</h3>
+                <p><span class="price">Rs. 290</span></p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Twins Cafe. All rights reserved.</p>
-  </footer>
+    <section id="offers" class="section">
+        <h2>Special Offers</h2>
+        <p>Limited-time offers just for you! Grab them before they're gone!</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Chicken Mo:Mo</h3>
+                <p><span class="old-price">Rs. 100</span> <span class="new-price">Rs. 50 only</span></p>
+            </div>
+            <div class="menu-card">
+                <h3>Chicken Pizza</h3>
+                <p><span class="old-price">Rs. 450</span> <span class="new-price">Rs. 300 only</span></p>
+            </div>
+        </div>
+    </section>
 
+    <section id="gallery" class="section">
+        <h2>Our Delicious Moments</h2>
+        <div class="gallery">
+            <img src="food.jpg" alt="Delicious Food Item 1" />
+            <img src="food1.jpg" alt="Delicious Food Item 2" />
+            <img src="food2.jpg" alt="Delicious Food Item 3" />
+            <img src="food3.jpg" alt="Delicious Food Item 4" />
+            <img src="food4.jpg" alt="Delicious Food Item 5" />
+            <img src="food5.jpg" alt="Delicious Food Item 6" />
+            <img src="food6.jpg" alt="Delicious Food Item 7" />
+            <img src="food7.jpg" alt="Delicious Food Item 8" />
+            <img src="food8.jpg" alt="Delicious Food Item 9" />
+            <img src="food9.jpg" alt="Delicious Food Item 10" />
+        </div>
+    </section>
+
+    <section id="reviews" class="section">
+        <h2>What Our Customers Say</h2>
+        <div class="reviews">
+            <img src="review.jpg" alt="Customer review 1" class="review-img" />
+            <img src="review1.jpg" alt="Customer review 2" class="review-img" />
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact Us</h2>
+        <p>📍 Mini Ring Rd, Bharatpur, Nepal</p>
+        <p>📞 984-7231831</p>
+        <p>✉️ twcafe143@gmail.com</p>
+        <p><a href="https://www.facebook.com/twinscafechitwan" target="_blank">🔗 Facebook Page</a></p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Twins Cafe. All rights reserved.</p>
+    </footer>
+
+    <button id="topBtn" onclick="scrollToTop()" title="Go to top">Top</button>
+
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const drawerNav = document.getElementById('drawer-nav');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+        const drawerLinks = document.querySelectorAll('.drawer-link');
+
+        function toggleDrawer() {
+            drawerNav.classList.toggle('open');
+            drawerOverlay.classList.toggle('open');
+            document.body.classList.toggle('no-scroll'); // Prevent body scroll when drawer is open
+        }
+
+        hamburger.addEventListener('click', toggleDrawer);
+        drawerOverlay.addEventListener('click', toggleDrawer); // Close when clicking outside
+
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', toggleDrawer); // Close when clicking a link
+        });
+
+
+        // Scroll to Top Button
+        const topBtn = document.getElementById('topBtn');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
+
 </html>
